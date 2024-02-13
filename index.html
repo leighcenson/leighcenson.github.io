@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html>
+<html class="no-js" lang="">
 
 <head>
 	<title>Leigh Censon</title>
@@ -7,6 +7,18 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<link rel="stylesheet" href="assets/css/main.css" />
 	<link rel="stylesheet" href="assets/css/modal.css" />
+	<link rel="stylesheet" href="assets/css/normalize.min.css">
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.min.css">
+        <link rel="stylesheet" href="assets/css/normalize.min.css">
+        <style>
+            #btn-close-modal {
+                width:100%;
+                text-align: center;
+                cursor:pointer;
+                color:#fff;
+            }
+
+        </style>
 </head>
 
 <body class="is-preload">
@@ -71,6 +83,21 @@
 			</div>
 		</section>
 
+		  <!--Call your modal-->
+		  <a id="demo01" href="#animatedModal">DEMO01</a>
+
+		  <!--DEMO01-->
+		  <div id="animatedModal">
+			  <!--THIS IS IMPORTANT! to close the modal, the class name has to match the name given on the ID  class="close-animatedModal" -->
+			  <div class="close-animatedModal"> 
+				  CLOSE MODAL
+			  </div>
+				  
+			  <div class="modal-content">
+						<!--Your modal content goes here-->
+			  </div>
+		  </div>
+
 		<!-- About Me -->
 		<section id="about" class="three">
 			<div class="container">
@@ -108,19 +135,35 @@
 			</div>
 		</section>
 
-		
-		<div class="modal">
+
+		<!-- <div class="modal">
 			<input id="modal" type="checkbox" name="modal">
-			<label for="modal" >Launch Modal</label>
+			<label for="modal">Launch Modal</label>
 			<div class="modal__overlay">
-			  <div class="modal__box">
-				<label for="modal">&#10006;</label>
-				<h4>This is your modal content</h4>
-				<h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac laoreet elit. Phasellus dignissim purus vitae urna cursus, quis congue ligula tristique. Ut nec blandit risus. Donec at orci ut justo venenatis viverra. Suspendisse in volutpat lacus. In enim est, dapibus eget ipsum sed, suscipit ultrices diam.</h6>
-			  </div>
+				<div class="modal__box">
+					<label for="modal" >&#10006;</label>
+					<h4>This is your modal content</h4>
+					<h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac laoreet elit. Phasellus dignissim
+						purus vitae urna cursus, quis congue ligula tristique. Ut nec blandit risus. Donec at orci ut justo
+						venenatis viverra. Suspendisse in volutpat lacus. In enim est, dapibus eget ipsum sed, suscipit
+						ultrices diam.</h6>
+				</div>
 			</div>
 		</div>
+	
+ -->
 
+ <!--QA Modal-->
+ <div id="QAModal">
+	<!--THIS IS IMPORTANT! to close the modal, the class name has to match the name given on the ID -->
+	<div  id="btn-close-modal" class="close-animatedModal"> 
+		CLOSE MODAL
+	</div>
+		
+	<div class="modal-content">
+		<p>hey</p>
+	</div>
+</div>
 
 		<!-- Portfolio -->
 		<section id="portfolio" class="two">
@@ -140,14 +183,14 @@
 								<h3>Fish Encyclopedia (Ongoing Project)</h3>
 							</header>
 						</article>
-						
+
 						<article class="item">
-							<a href="#" class="image fit"><img src="images/pic03.jpg" alt="" /></a>
+							<a href="#QAModal" class="image fit"><img src="images/pic03.jpg" alt="" /></a>
 							<header>
 								<h3>QA Automation Project</h3>
 							</header>
 						</article>
-						
+
 						<article class="item">
 							<a href="#" class="image fit"><img src="images/pic03.jpg" alt="" /></a>
 							<header>
@@ -156,21 +199,22 @@
 						</article>
 					</div>
 					<div class="col-6 col-12-mobile">
-						
+
 						<article class="item">
-							<a href="awsCloudTranslator.html" class="image fit"><img src="images/pic03.jpg" alt="" /></a>
+							<a href="awsCloudTranslator.html" class="image fit"><img src="images/pic03.jpg"
+									alt="" /></a>
 							<header>
 								<h3>AWS Cloud Translator</h3>
 							</header>
 						</article>
-						
+
 						<article class="item">
 							<a href="#" class="image fit"><img src="images/pic03.jpg" alt="" /></a>
 							<header>
 								<h3>E-commerce Website</h3>
 							</header>
 						</article>
-						
+
 					</div>
 
 				</div>
@@ -198,6 +242,7 @@
 
 	</div>
 
+
 	<!-- Footer -->
 	<div id="footer">
 
@@ -217,8 +262,29 @@
 	<script src="assets/js/breakpoints.min.js"></script>
 	<script src="assets/js/util.js"></script>
 	<script src="assets/js/main.js"></script>
-	<script type="text/javascript" src="//pagead2.googlesyndication.com/pagead/show_ads.js">d</script>
+<!-- 
+	<script>
+		function closeModal() {
+			var initialScrollPos = window.scrollY;
+			window.scrollTo(0, initialScrollPos);
+		}
+	
+		// Add event listener to close button inside the modal
+		document.querySelector('.modal__box label').addEventListener('click', function(event) {
+			event.preventDefault(); // Prevent the default action of toggling the checkbox
+			closeModal(); // Close the modal
+		});
+	</script>
+	 -->
 
+	 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="yourPath/animatedModal.min.js"></script>
+        <script>
+
+            //demo 01
+            $("#QAModal").animatedModal();
+
+        </script>
 </body>
 
 </html>
